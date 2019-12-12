@@ -1,0 +1,110 @@
+/*
+namespace exemploCartoes{
+class Cartao 
+{
+  private string tipo;
+  private Cliente titular;
+  private double limite;    // private double limite {get; set;}
+  //private double saldo;
+  private double limiteAtual;
+  private List<compra> ComprasMes = new List<compra>();
+  private bool cartaoBloqueado;
+
+  public string Tipo
+  {
+    get {return tipo;}
+    set {tipo = value;}
+  }
+
+  public double Limite()
+  {
+    get {return limite;}
+    set {limite = value;}
+  }
+
+  public double LimiteAtual()
+  {
+    get {return limiteAtual;}
+    set {limiteAtual = value;}
+  }
+
+  public double Saldo()
+  {
+    get {return saldo;}
+    set {saldo = value;}
+  }
+
+  public double CartaoBloqueado()
+  {
+    get {return cartaoBloqueado;}
+    set {cartaoBloqueado = value;}
+  }
+
+  public virtual bool credito(double valor){
+    compra = valor;
+      if (LimiteAtual >= compra){
+        LimiteAtual -= compra;
+        return true;
+      }else{
+        return false;
+      }
+    }
+
+  public virtual bool debito (double compra){
+      if (Saldo >= compra){
+        Saldo -= compra;
+        return true;
+      }else{
+        return false;
+      }
+    }
+
+  public void fecharFatura()
+  {
+    cartaoBloqueado = true;
+    Console.WriteLine("Mensagem");
+  }
+
+  public void pagarFatura(double valor)
+  {
+    limiteAtual += valor;
+    cartaoBloqueado = false;
+  }
+
+  public void comprar (double valor)
+  {
+    this.credito(valor);
+  } 
+
+  public void comprar (double valor, int funcao)
+  {
+    if(funcao == 1) {
+      this.credito(valor)
+     }else{
+        if(titular.score == 3){
+          valor *= 0.98;
+        }
+        this.debito(valor);
+     }
+  } 
+
+  public Cartao (string titular) {
+    Titular = titular
+    Limite = 200;
+    LimiteAtual = 200;
+    CartaoBloqueado = false;
+    Saldo = 0;
+  }
+
+
+  public Cartao (string titular, double limite) {
+    Titular = titular;
+    Limite = limite;
+    LimiteAtual = limite;
+    CartaoBloqueado = false;
+    Saldo = getSaldoemConta();
+  }
+}
+}
+
+*/

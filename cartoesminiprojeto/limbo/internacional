@@ -1,0 +1,21 @@
+/*
+namespace exCard {
+  
+  class Internacional : Cartao {
+    public override bool credito (double valor){
+      base : credito(valor);
+    }
+
+    public override bool debito (double valor){
+      valor *= 1.05;
+      base : debito (valor);
+    }
+
+    public Internacional : base (string titular) 
+    { }
+
+    public Internacional : base (string titular, double limite) 
+    { }
+  }
+}
+*/

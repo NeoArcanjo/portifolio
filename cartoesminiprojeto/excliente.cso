@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using CardCreator;
+
+namespace exCliente {
+  class Cliente {
+    private List<Cartao> cartoes = new List<Cartao>();
+    private enum typeScore {D, C, B, A};
+    private int score;
+
+    public Cliente () 
+    {
+      score = (int)typeScore.D;
+    }
+
+    public Cliente (int Score) 
+    {
+      score = Score;
+    }
+  }
+}

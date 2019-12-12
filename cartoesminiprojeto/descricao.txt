@@ -1,0 +1,7 @@
+Uma empresa de cartões de crédito precisa de um sistema de gerenciamento e operações de cartões de crédito. Para isto, ela emite dois cartões: Internacional e Nacional. Ambos os cartões possuem função de crédito e débito. Entretanto, o cartão Internacional, em sua função de débito, cobra 5% do total da transação como taxas. Já o cartão Nacional, 3%. Em funções de crédito, existe um limite pré estabelecido para as compras e só é possível concluir a compra caso haja limite. Concluindo a compra, o limite é atualizado e a compra é registrada. Ao final do mês, uma função de fechar fatura consolida as compras e emite um alerta de fatura fechada de qualquer cartão. Não será possível utilizar o cartão após o fechar fatura e até a fatura ser paga.
+
+A função "comprar" do cartão poderá receber como parâmetro, além do valor da compra, se a compra usará o débito ou o crédito. neste caso, será realizada a respectiva transação. Caso não seja informado, ele usará a função crédito automaticamente. 
+
+Cada cartão está associado a um cliente. Assim, um cliente poderá ter quantos cartões desejar. Entretanto, existe uma enumeração de A a D indicando o grau de adimplência do cliente. Clientes A terão desconto de 2% em cada compra efetuada no cartão na função débito. 
+
+Com base neste cenário, implemente o programa necessário à empresa de cartões, adotando corretamente conceitos de herança e polimorfismo.

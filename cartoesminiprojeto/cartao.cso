@@ -1,0 +1,84 @@
+using System;
+using exCliente;
+using System.Collections.Generic;
+
+namespace CardCreator {
+  class Cartao 
+  {
+    //private string tipo;
+    private Cliente titular;
+    private double limite;    // private double limite {get; set;}
+    private double limiteAtual;
+    private List<double> compras = new List<double>();
+    private bool cartaoBloqueado;
+
+    public double Limite
+    {
+      get {return limite;}
+      set {limite = value;}
+    }
+
+    public double LimiteAtual
+    {
+      get {return limiteAtual;}
+      set {limiteAtual = value;}
+    }
+
+    
+    public bool CartaoBloqueado
+    {
+      get {return cartaoBloqueado;}
+      set {cartaoBloqueado = value;}
+    }
+
+    public bool credito(double valor)
+    {
+      if (limiteAtual >= valor && cartaoBloqueado == false){
+        limiteAtual -= valor;
+        compras.Add(valor);
+        return true;
+      }else{
+        return false;
+      }
+    }
+
+    public void fechar_Fatura()
+    {
+      cartaoBloqueado = true;
+      Console.WriteLine("Mensagem");
+    }
+
+    public void ver_fatura(){
+      foreach(double v in compras){
+        Console.WriteLine(v);
+      }
+    }
+
+
+    public void pagarFatura(double valor)
+    {
+      limiteAtual += valor;
+      cartaoBloqueado = false;
+    }
+
+    public void comprar (double valor)
+    {
+      this.credito(valor);
+    } 
+
+    public Cartao (Cliente Titular) {
+      titular = Titular;
+      limite = 200.00;
+      limiteAtual = 200.00;
+      cartaoBloqueado = false;
+    }
+
+
+    public Cartao (Cliente Titular, double Limite) {
+      titular = Titular;
+      limite = Limite;
+      limiteAtual = Limite;
+      cartaoBloqueado = false;
+    }
+  }
+}
